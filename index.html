@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flower Flappy</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="app-shell">
+
+    <section class="top-bar">
+      <div>
+        <p class="eyebrow">Flower Flappy</p>
+        <h1>Your Bouquet</h1>
+      </div>
+
+      <div class="currency-pill">
+        <span id="pollenCount">0</span>
+        <small>pollen</small>
+      </div>
+    </section>
+
+    <section class="garden-card" id="gardenCard">
+      <div class="sky-glow"></div>
+
+      <div class="bouquet-stage" id="bouquetStage">
+        <div class="flower flower-one">🌹</div>
+        <div class="flower flower-two">🌼</div>
+        <div class="flower flower-three">🌷</div>
+        <div class="vase">🏺</div>
+      </div>
+
+      <div class="bouquet-status">
+        <p id="bouquetMood">Fresh and happy</p>
+        <button id="refreshBouquetBtn">Refresh bouquet</button>
+      </div>
+    </section>
+
+    <section class="action-panel">
+      <button class="primary-btn" id="playBeeBtn">
+        Play Flappy Bee
+      </button>
+
+      <button class="secondary-btn" id="arrangeBtn">
+        Arrange Flowers
+      </button>
+    </section>
+
+    <section class="collection-card">
+      <h2>Flower Collection</h2>
+
+      <div class="flower-grid">
+        <button class="flower-token unlocked" data-flower="rose">🌹<span>Rose</span></button>
+        <button class="flower-token unlocked" data-flower="daisy">🌼<span>Daisy</span></button>
+        <button class="flower-token locked" data-flower="tulip">🌷<span>Tulip</span></button>
+        <button class="flower-token locked" data-flower="lavender">🪻<span>Lavender</span></button>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="game-overlay hidden" id="gameOverlay">
+    <div class="game-card">
+      <div class="game-hud">
+        <button id="closeGameBtn">×</button>
+        <div>
+          <p>Flappy Bee</p>
+          <strong id="scoreDisplay">0</strong>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="360" height="520"></canvas>
+
+      <div class="game-instructions" id="gameInstructions">
+        Tap to flap. Collect pollen. Avoid stems.
+      </div>
+
+      <button class="primary-btn" id="restartGameBtn">
+        Start
+      </button>
+    </div>
+  </section>
+
+</body>
+</html>
